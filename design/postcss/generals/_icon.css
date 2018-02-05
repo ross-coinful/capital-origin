@@ -1,0 +1,59 @@
+.icon-funding {
+    @mixin background-image icon/icon-funding.svg;
+    width: 140px;
+    height: 140px;
+}
+
+.icon-supporting {
+    @mixin background-image icon/icon-supporting.svg;
+    width: 140px;
+    height: 140px;
+}
+
+.icon-building {
+    @mixin background-image icon/icon-building.svg;
+    width: 140px;
+    height: 140px;
+}
+
+.icon-connecting {
+    @mixin background-image icon/icon-connecting.svg;
+    width: 140px;
+    height: 140px;
+}
+
+.icon-focused {
+    @mixin background-image icon/icon-focused.svg;
+    width: 140px;
+    height: 140px;
+}
+
+.icon-unique {
+    @mixin background-image icon/icon-unique.svg;
+    width: 140px;
+    height: 140px;
+}
+
+.icon-knowhow {
+    @mixin background-image icon/icon-knowhow.svg;
+    width: 140px;
+    height: 140px;
+}
+
+.icon-build {
+    @mixin background-image icon/icon-build.svg;
+    width: 140px;
+    height: 140px;
+}
+
+.icon-menu {
+    @mixin background-image icon/icon-menu.svg;
+    width: 30px;
+    height: 35px;
+}
+
+.icon-close {
+    @mixin background-image icon/icon-close.svg;
+    width: 30px;
+    height: 30px;
+}

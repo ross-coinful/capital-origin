@@ -1,0 +1,43 @@
+{
+  "name": "capital-management",
+  "version": "1.0.0",
+  "description": "page for nogle capital management",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gulp dist-img && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.nogle.io:50022/noglesites/capital-management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.2.1",
+    "gulp-ejs": "^3.1.0",
+    "gulp-filter": "^5.0.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "imagemin-pngcrush": "^5.1.0",
+    "postcss-assets": "^5.0.0",
+    "postcss-calc": "^6.0.1",
+    "postcss-discard-comments": "^2.0.4",
+    "postcss-scss": "^1.0.2",
+    "postcss-strip-inline-comments": "^0.1.5",
+    "precss": "^2.0.0",
+    "run-sequence": "^2.2.0"
+  },
+  "dependencies": {
+    "gh-pages": "^1.1.0"
+  }
+}

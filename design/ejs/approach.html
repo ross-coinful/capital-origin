@@ -1,0 +1,35 @@
+<% include partial/_head.html %>
+<div class="approach">
+	<%- include('partial/_navbar.html', {fixed: true, active: navbar.nav2}); %>
+	<div class="jumbotron">
+		<div class="container">
+			<%- include('partial/_jumbotron-text.html', {caption: approach.jumbotron.caption, des: approach.jumbotron.des}); %>
+			<div class="list-approach">
+				<% for(var i=0, approaches=approach.jumbotron.approaches; i<approaches.length; i++){ %>
+					<div class="item">
+						<i class="icon icon-<%= approaches[i].item.toLowerCase() %>"></i>
+						<h3 class="h3"><%= approaches[i].item %></h3>
+						<p class="p2"><%= approaches[i].des %></p>
+					</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="container">
+			<h2 class="h2"><%= approach.section1.header %></h2>
+			<div class="list-process">
+				<% for(var i=0, processes=approach.section1.processes; i<processes.length; i++){ %>
+					<div class="item">
+						<h3 class="h3"><%= processes[i].item %></h3>
+						<p class="p2"><%= processes[i].des %></p>
+					</div>
+				<% } %>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<% include partial/_footer.html %>
+
+<% include partial/_end.html %>

@@ -1,0 +1,72 @@
+<% include partial/_head.html %>
+<div class="team">
+	<%- include('partial/_navbar.html', {fixed: true, active: navbar.nav3}); %>
+	<div class="jumbotron">
+		<div class="container">
+			<%- include('partial/_jumbotron-text.html', {caption: team.jumbotron.caption, des: team.jumbotron.des}); %>
+		</div>
+	</div>
+	<div class="section section-management">
+		<div class="container">
+			<h2 class="h2"><%= team.section1.header %></h2>
+			<% for(var i=0, members=team.section1.members, length=members.length;i<length; i++){ %>
+				<div class="detail">
+					<div class="image-container">
+						<div class="image image-<%= members[i].name.split(' ')[0].toLowerCase() %>">
+							<img src="img/member/member-m-jon.jpg">
+						</div>
+					</div>
+					<div class="intro">
+						<h3 class="h3"><%= members[i].name.toUpperCase() %></h3>
+						<span class="title"><%= members[i].title.toUpperCase() %></span>
+						<hr class="hr">
+						<div class="p2"><%- members[i].intro %></div>
+					</div>
+				</div>
+			<% } %>
+
+			<div class="members">
+				<% for(var i=0, members=team.section1.members, length=Math.ceil(members.length / 4) * 4;i<length; i++){ %>
+					<div class="item">
+						<% if(members[i]) { %>
+							<div class="image image-<%= members[i].name.split(' ')[0].toLowerCase() %>">
+								<img src="img/member/member-s-jon.jpg">
+							</div>
+							<h3 class="h3"><%= members[i].name.toUpperCase() %></h3>
+						<% } %>					
+					</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="section section-advisors">
+		<div class="container">
+			<h2 class="h2"><%= team.section2.header %></h2>
+			<div class="detail">
+				<div class="image-container">
+					<img class="image" src="img/member/<%= team.section1.members[0].imgDetail %>">
+				</div>
+				<div class="intro">
+					<h3 class="h3"><%= team.section1.members[0].name.toUpperCase() %></h3>
+					<span class="title">title title title</span>
+					<hr class="hr">
+					<div class="p2">intro intro intro</div>
+				</div>
+			</div>
+			<div class="members">
+				<% for(var i=0, members=team.section2.members, length=Math.ceil(members.length / 4) * 4;i<length; i++){ %>
+					<div class="item">
+						<% if(members[i]) { %>
+							<img class="image" src="img/member/<%= members[i].imgThumbnail %>">
+							<h3 class="h3"><%= members[i].name.toUpperCase() %></h3>
+						<% } %>					
+					</div>
+				<% } %>
+			</div>
+		</div>
+	</div> -->
+</div>
+
+<% include partial/_footer.html %>
+
+<% include partial/_end.html %>

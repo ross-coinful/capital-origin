@@ -1,0 +1,24 @@
+<% if(fixed) { %>
+	<nav class="navbar fixed">
+ <% } else { %>  
+	<nav class="navbar">
+<% } %>
+		<div class="container">
+			<i class="icon icon-menu"></i>
+			<a class="logo" href="/"></a>
+			<i class="icon icon-close"></i>
+			<ul class="navbar-nav">
+				<% for (var i = 1; i < 5; i++) { %>
+					<li class="nav-item">	
+						<% var nav = navbar['nav' + i]; %>
+						<% if(active === nav){ %>
+						   <a class="link active" href="<%= navbar['href' + i] %>">
+						 <% } else { %>  
+						   <a class="link" href="<%= navbar['href' + i] %>">
+						<% } %>
+							<%- nav %></a>
+					</li>
+				<% } %>
+			</ul>
+		</div>
+	</nav>

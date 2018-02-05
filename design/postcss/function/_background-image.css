@@ -1,0 +1,7 @@
+@define-mixin background-image $img {
+    display: inline-block;
+    background-image: resolve($img);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}

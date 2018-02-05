@@ -1,0 +1,78 @@
+.jumbotron-text {
+	display: flex;
+	justify-content: space-between;
+	.h2 {
+		color: $color-orange;
+	}
+	.p1 {
+		padding-top: 20px;
+	}
+}
+
+.investments .jumbotron-text {
+	.h2 {
+		max-width: 508px;
+		width: 39%;
+	}
+	.p1 {
+		max-width: 678px;
+		width: 53%;
+	}
+}
+
+.approach .jumbotron-text {
+	.h2 {
+		max-width: 571px;
+		width: 44%;
+	}
+	.p1 {
+		max-width: 678px;
+	}
+}
+
+.team .jumbotron-text {
+	.h2 {
+		max-width: 579px;
+	}
+	.p1 {
+		max-width: 640px;
+	}
+}
+
+.approach,
+.team{
+	.jumbotron-text .p1{
+		padding-left: 30px;
+	}
+}
+
+@media screen and (max-width: $screen-mobile) {
+	.jumbotron-text {
+		flex-wrap: wrap;
+		.h2 {
+			font-size: 26px;
+			margin-bottom: 25px;
+		}
+		.p1 {
+			padding-top: 0;
+		}
+	}
+
+	.investments,
+	.approach,
+	.team {
+		.jumbotron-text {
+			.h2,
+			.p1 {
+				width: 100%;
+			}
+		}
+	}
+
+	.approach,
+	.team{
+		.jumbotron-text .p1{
+			padding-left: 0;
+		}
+	}
+}

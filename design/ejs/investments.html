@@ -1,0 +1,64 @@
+<% include partial/_head.html %>
+
+<div class="investments">
+	<%- include('partial/_navbar.html', {fixed: true, active: navbar.nav1}); %>
+	<div class="jumbotron">
+		<div class="container">
+			<%- include('partial/_jumbotron-text.html', {caption: investments.jumbotron.caption, des: investments.jumbotron.des}); %>
+		</div>
+	</div>
+	<div class="section section-quote">
+		<div class="container">
+			<p class="quote"><%- investments.section1.title %></p>
+		</div>
+	</div>
+	<div class="section">
+		<div class="container">
+			<h2 class="h2 title"><%- investments.section2.title %></h2>
+			<div class="list-feature">
+				<div class="item">
+					<i class="icon icon-focused"></i>				
+					<h3 class="h3"><%= investments.focused %></h3>
+				</div>
+				<div class="item">
+					<i class="icon icon-unique"></i>				
+					<h3 class="h3"><%= investments.unique %></h3>
+				</div>
+				<div class="item">
+					<i class="icon icon-knowhow"></i>				
+					<h3 class="h3"><%= investments.knowhow %></h3>
+				</div>
+				<div class="item">
+					<i class="icon icon-build"></i>				
+					<h3 class="h3"><%= investments.build %></h3>
+				</div>
+			</div>
+			<div class="list-board">
+				<% for(var i = 0, boards = investments.boards; i < boards.length; i++) { %>
+					<% var board = boards[i]; %>
+					<div class="board">
+						<h3 class="h3 title"><%= board.title %></h3>
+						<ul class="list">
+							<% if(board.groups) { %>
+								<% for(var k = 0, groups = board.groups; k < groups.length; k++) { %>
+									<p class="p1 group"><%= groups[k] %></p>
+									<% for(var j = 0, list = board.list[k]; j < list.length; j++) { %>
+										<li class="p1"><%= list[j] %></li>
+									<% } %>
+								<% } %>
+							 <% } else { %>  					
+								<% for(var j = 0, list = board.list; j < list.length; j++){ %>
+									<li class="p1"><%= list[j] %></li>
+								<% } %>
+							<% } %>	
+						</ul>		
+					</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include partial/_footer.html %>
+
+<% include partial/_end.html %>

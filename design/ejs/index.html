@@ -1,0 +1,60 @@
+<% include partial/_head.html %>
+
+<div class="homepage">
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="h1"><%- homepage.jumbotron.caption %></h1>
+			<p class="p1"><%- homepage.jumbotron.des %></p>
+		</div>
+		<%- include('partial/_navbar.html', {fixed: false, active: ''}); %>
+	</div>
+	<div class="section section-investments">
+		<div class="container">
+			<h2 class="h2 title"><%- homepage.section1.title %></h2>
+			<p class="p1 des"><%- homepage.section1.des %></p>
+			<button class="btn">
+				<a class="link" href="<%- navbar.href1 %>">
+					<%- homepage.section1.btn %>
+				</a>
+			</button>
+		</div>
+	</div>
+	<div class="section section-approach">
+		<div class="container">
+			<h2 class="h2 title"><%- homepage.section2.title %></h2>
+			<p class="p1 des"><%- homepage.section2.des %></p>
+			<button class="btn">
+				<a class="link" href="<%- navbar.href2 %>">
+					<%- homepage.section2.btn %>
+				</a>
+			</button>
+		</div>
+	</div>
+	<div class="section section-team">
+		<div class="container">
+			<h2 class="h2 title"><%- homepage.section3.title %></h2>
+			<p class="p1 des"><%- homepage.section3.des %></p>
+			<div class="member-group">
+				<% for(var i = 0, members = homepage.members; i < members.length; i++) { %>
+				<div class="member">
+					<img class="image" src="img/member/<%= members[i].imgThumbnail %>">
+					<div class="info">
+						<span class="name"><%- members[i].name %></span>
+						<span class="p1 title"><%- members[i].title %></span>
+						<span class="p1 expert"><%- members[i].expert %></span>
+					</div>
+				</div>
+				<% } %>
+			</div>
+			<button class="btn">
+				<a class="link" href="<%- navbar.href3 %>">
+					<%- homepage.section3.btn %>
+				</a>
+			</button>
+		</div>
+	</div>
+</div>
+
+<% include partial/_footer.html %>
+
+<% include partial/_end.html %>

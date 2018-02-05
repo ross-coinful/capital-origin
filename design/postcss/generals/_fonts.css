@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto'), local('Roboto-300'),
+       url('../font/Roboto-300/Roboto-300.woff2') format('woff2'),
+       url('../font/Roboto-300/Roboto-300.woff') format('woff'),
+       url('../font/Roboto-300/Roboto-300.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-regular'),
+       url('../font/Roboto-400/Roboto-regular.woff2') format('woff2'),
+       url('../font/Roboto-400/Roboto-regular.woff') format('woff'),
+       url('../font/Roboto-400/Roboto-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-500'),
+       url('../font/Roboto-500/Roboto-500.woff2') format('woff2'),
+       url('../font/Roboto-500/Roboto-500.woff') format('woff'),
+       url('../font/Roboto-500/Roboto-500.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Manuale';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Manuale'), local('Manuale-regular'),
+       url('../font/Manuale-400/Manuale-regular.woff2') format('woff2'),
+       url('../font/Manuale-400/Manuale-regular.woff') format('woff'),
+       url('../font/Manuale-400/Manuale-regular.ttf') format('truetype');
+}

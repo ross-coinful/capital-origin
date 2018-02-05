@@ -1,0 +1,251 @@
+.homepage {
+	.p1 {
+		font-weight: 400;
+		color: $color-black-one;
+	}
+	.jumbotron {
+		position: relative;
+		top: 0;
+		width: 100%;
+		height: 90vh;
+		padding-top: 251px;
+		background-color: $color-orange;
+		.h1 {
+			width: 100%;
+			margin-bottom: 32px;
+			line-height: 56px;
+			color: $color-white;
+		}
+		.p1 {
+			max-width: 100%;
+			width: 627px;
+			line-height: 21px;
+			color: $color-white;
+		}
+	}
+	.navbar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		&.fixed {
+			position: fixed;
+			height: $navbar-h-web;
+			animation: slide-down .3s 1;
+		}
+	}
+	.section {
+		padding-top: 100px;
+		padding-bottom: 60px;
+		text-align: center;
+		.title {
+			margin-bottom: 34px;
+		}
+		.des {
+			max-width: 100%;
+			margin: 0 auto 66px;
+			line-height: 21px;
+		}
+	}
+}
+
+.section-investments {
+	.des {
+		width: 1063px;
+	}
+}
+
+.section-approach {
+	background-color: $color-gray-one;
+	.des {
+		width: 971px;
+	}
+}
+
+.section-team {
+	padding-bottom: 95px !important;
+	.des {
+		width: 1280px;
+		margin-bottom: 110px;
+	}
+	.btn {
+		margin-top: 70px;
+	}
+}
+
+.member-group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.member {
+	position: relative;
+	overflow: hidden;
+	&:nth-child(1) {
+		max-width: 826px;
+		width: 64.6%;
+	}
+	&:nth-child(2) {
+		max-width: 434px;
+		width: 34%;
+	}
+	&:nth-child(3) {
+		max-width: 550px;
+		width: 43%;
+	}
+	&:nth-child(4) {
+		max-width: 710px;
+		width: 55.6%;
+	}
+	&:nth-child(1),
+	&:nth-child(2) {
+		margin-bottom: 1.4%;
+	}
+	&:nth-child(2),
+	&:nth-child(4) {
+		margin-left: 1.4%;
+	}
+	&:hover .info {
+		bottom: 0;
+	}
+	.image {
+		display: block;
+		width: 100%;
+	}
+	.info {
+		position: absolute;
+		bottom: -100px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		height: 100px;
+		padding: 26px 30px 15px 34px;
+		color: $color-white;
+		transition: bottom .5s;
+		.p1 {
+			position: relative;
+			z-index: 1;
+			line-height: 21px;
+			margin-top: 3px;
+			color: $color-white;
+		}
+		.name {
+			position: relative;
+			z-index: 1;
+			display: inline-block;
+			width: 100%;
+			font-size: 30px;
+			font-weight: 300;
+			line-height: 35px;
+			text-align: left;
+		}
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			display: block;
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: $color-black-one;
+			opacity: 0.6;
+		}
+	}
+}
+
+@keyframes slide-down {
+    from {
+    	top: -100px;
+    }
+    to {
+    	top: 0;
+    }
+}
+
+
+@media screen and (max-width: $screen-mobile) {
+	.homepage {
+		.jumbotron {
+			display: flex;
+			align-items: center;
+			height: 80vh;
+			padding-top: 0;
+			.h1 {
+				width: 90%; // for wrap
+				font-size: 24px;
+				line-height: 29px;
+			}
+			.p1 {
+				font-size: 12px;
+				line-height: 19.5px;
+			}
+		}
+		.navbar.fixed {
+			height: $navbar-h-mobile;
+			.icon-menu {
+				position: static;
+				@mixin background-image icon/icon-menu.svg;
+			}
+		}
+		.section {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			.des {
+				margin-bottom: 39px;
+			}
+		}
+		.section-team {
+			padding-bottom: 48px !important;
+			.des {
+				margin-bottom: 22px;
+			}
+			.btn {
+				margin-top: 32px;
+			}
+		}
+		.member {
+			position: relative;
+			width: 100%;
+			max-width: 100%;
+			margin-left: 0;
+			margin-bottom: 55px;
+			overflow: visible;
+ 		}
+		.info {
+			position: absolute;
+			z-index: 0;
+			top: 100%;
+			padding: 0;
+			color: $color-black-one;
+			.name {
+				position: absolute;
+				top: 6px;
+				left: 0;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 14px;
+			}
+			.p1 {
+				margin-top: 0;
+				font-size: 10px;
+				line-height: 11px;
+				color: $color-black-one;
+			}
+			.expert {
+				position: absolute;
+				top: 8px;
+				right: 0;
+			}
+			.title {
+				position: absolute;
+				top: 24px;
+				left: 0;
+			}
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

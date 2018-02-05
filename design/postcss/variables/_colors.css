@@ -1,0 +1,24 @@
+// transparent
+$color-transparent: rgba(255, 255, 255, 0);
+
+// white
+$color-white: #fff;
+
+// orange
+$color-orange: #ff5529;
+
+// yellow
+$color-yellow: #ffc847;
+
+// gray
+$color-gray-one: #f2f2f2;
+$color-gray-two: #9d9d9d;
+$color-gray-three: #979797;
+$color-gray-four: #e9e9e9;
+$color-gray-five: #969696;
+
+// black
+$color-black-one: #33353d;
+$color-black-two: #4a4a4a;
+$color-black-three: #626262;
+$color-black-four: #4a494a;

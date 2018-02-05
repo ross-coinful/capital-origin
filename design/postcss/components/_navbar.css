@@ -1,0 +1,121 @@
+.navbar {
+	width: 100%;
+	background-color: $color-orange;
+	.link:hover {
+		color: $color-yellow;
+	}
+	.link {
+		text-transform: uppercase;
+	}
+}
+
+.navbar .container {
+	display: flex;
+	align-items: center;
+	height: $navbar-h-web;
+}
+
+.navbar-nav {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.nav-item {
+	margin-left: 53px;
+}
+
+.logo {
+	width: 99px;
+	height: 38px;
+	@mixin background-image logo/logo-white.svg;
+}
+
+.navbar.fixed {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	background-color: $color-white;
+	.link {
+		color: $color-black-three;
+		&.active {
+			color: $color-orange;
+		}
+		&:hover {
+			color: $color-yellow;
+		}
+	}
+	.logo {
+		@mixin background-image logo/logo.svg;
+	}
+}
+
+.icon-close,
+.icon-menu {
+	display: none;
+}
+
+@media screen and (max-width: $screen-mobile) {
+	.navbar .container {
+		justify-content: space-between;
+		height: $navbar-h-mobile;
+	}
+	.navbar-nav {
+		display: none;
+		&.show {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+			height: 100vh;
+			width: 100vw;
+			.nav-item {
+				position: relative;
+				z-index: 1;
+				margin-bottom: 37px;
+				cursor: pointer;
+				.link {
+					font-size: 26px;
+					font-family: Manuale;
+					color: $color-white;
+					text-transform: capitalize;
+				}
+			}
+			&:after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				content: '';
+				height: 100vh;
+				width: 100vw;
+				background-color: $color-black-one;
+				opacity: 0.95;
+			}
+		}
+	}
+	.icon-close.show,
+	.icon-menu {
+		display: inline-block;
+		cursor: pointer;
+	}
+	.icon-close.show {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		z-index: 2;
+	}
+	.homepage .icon-menu {
+		position: absolute;
+		top: calc(-80vh + 94px);
+		@mixin background-image icon/icon-menu-white.svg;
+	}
+	.logo {
+		width: 67px;
+		height: 30px;
+	}
+}

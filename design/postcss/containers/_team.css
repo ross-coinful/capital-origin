@@ -1,0 +1,224 @@
+.team {
+	.jumbotron {
+		padding-top: 130px;
+		padding-bottom: 165px;
+	}
+	.section{
+		background-color: $color-white;
+		.h2 {
+			text-align: center;
+		}
+		.members {
+			display: flex;
+			justify-content: space-between;
+			flex-flow: row wrap;
+		}
+		.item {
+			position: relative;
+			width: calc((100% - 81px) / 4);
+			margin-top: 80px;
+			margin-bottom: 66px;
+			cursor: pointer;
+			opacity: 0;
+			.image {
+				width: 100%;
+				&>img {
+					vertical-align: top;
+					width: 100%;
+					opacity: 0;
+				}
+			}
+			.image-jonathan {
+				@mixin background-image member/member-s-jon2x.jpg;
+			}
+			.image-carlos {
+				@mixin background-image member/member-s-carlos2x.jpg;
+			}
+			.image-hank {
+				@mixin background-image member/member-s-hank2x.jpg;
+			}
+			.image-stephen {
+				@mixin background-image member/member-s-stephen2x.jpg;
+			}
+			.image-harvey {
+				@mixin background-image member/member-s-harvey2x.jpg;
+			}
+			.image-michael {
+				@mixin background-image member/member-s-mike2x.jpg;
+			}
+			.image-yew {
+				@mixin background-image member/member-s-yew2x.jpg;
+			}
+			.image-ludwin {
+				@mixin background-image member/member-s-ludwin2x.jpg;
+			}
+			.h3 {
+				position: absolute;
+				width: 100%;
+				bottom: -50px;
+				font-weight: 300;
+				text-align: center;
+			}
+		}
+	}
+	.section-management {
+		padding-top: 37px;
+		padding-bottom: 94px;
+		margin-top: 530px;
+	}
+	/* .section-advisors 
+		padding: 83px 0 94px 0;
+	} */
+	.detail {
+		display: none;
+		margin-top: 80px;
+		opacity: 0;
+		.image-container {
+			flex: 1;
+		}
+		.image {
+			&>img {
+				vertical-align: top;
+				width: 100%;
+				opacity: 0;
+			}
+		}
+		.image-jonathan {
+			@mixin background-image member/member-m-jon2x.jpg;
+		}
+		.image-carlos {
+			@mixin background-image member/member-m-carlos2x.jpg;
+		}
+		.image-hank {
+			@mixin background-image member/member-m-hank2x.jpg;
+		}
+		.image-stephen {
+			@mixin background-image member/member-m-stephen2x.jpg;
+		}
+		.image-harvey {
+			@mixin background-image member/member-m-harvey2x.jpg;
+		}
+		.image-michael {
+			@mixin background-image member/member-m-mike2x.jpg;
+		}
+		.image-yew {
+			@mixin background-image member/member-m-yew2x.jpg;
+		}
+		.image-ludwin {
+			@mixin background-image member/member-m-ludwin2x.jpg;
+		}
+		.intro {
+			flex: 1;
+			padding-left: 70px;
+			.h3 {
+				margin-bottom: 14px;
+			}
+			.title {
+				font-size: 18px;
+				line-height: 1.17;
+				color: $color-black-four;
+			}
+			.hr {
+				margin: 20px 0 25px 0;
+				border: 0.5px solid $color-gray-five;
+			}
+			.p2 {
+				p {
+					margin-bottom: 12px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $screen-mobile) {
+	.team {
+		.jumbotron {
+			padding-top: 79px;
+			padding-bottom: 0;
+		}
+		.section {
+			.item {
+				margin-top: 33px;
+				margin-bottom: 28px;
+				width: calc((100% - 15px) / 2);
+				.image-jonathan {
+					@mixin background-image member/member-s-jon.jpg;
+				}
+				.image-carlos {
+					@mixin background-image member/member-s-carlos.jpg;
+				}
+				.image-hank {
+					@mixin background-image member/member-s-hank.jpg;
+				}
+				.image-stephen {
+					@mixin background-image member/member-s-stephen.jpg;
+				}
+				.image-harvey {
+					@mixin background-image member/member-s-harvey.jpg;
+				}
+				.image-michael {
+					@mixin background-image member/member-s-mike.jpg;
+				}
+				.image-yew {
+					@mixin background-image member/member-s-yew.jpg;
+				}
+				.image-ludwin {
+					@mixin background-image member/member-s-ludwin.jpg;
+				}
+				.h3 {
+					bottom: -24px;
+				}
+			}
+		}
+		.section-management {
+			padding-top: 30px 0 22px 0;
+		}
+		.section-advisors {
+			padding: 20px 0 54px 0;
+		}
+		.detail {
+			flex-direction: column;
+			margin-top: 33px;
+			.image-jonathan {
+				@mixin background-image member/member-m-jon.jpg;
+			}
+			.image-carlos {
+				@mixin background-image member/member-m-carlos.jpg;
+			}
+			.image-hank {
+				@mixin background-image member/member-m-hank.jpg;
+			}
+			.image-stephen {
+				@mixin background-image member/member-m-stephen.jpg;
+			}
+			.image-harvey {
+				@mixin background-image member/member-m-harvey.jpg;
+			}
+			.image-michael {
+				@mixin background-image member/member-m-mike.jpg;
+			}
+			.image-yew {
+				@mixin background-image member/member-m-yew.jpg;
+			}
+			.image-ludwin {
+				@mixin background-image member/member-m-ludwin.jpg;
+			}
+			.intro {
+				padding-left: 0;
+				.h3 {
+					margin: 16px 0 10px 0;
+				}
+				.title {
+					font-size: 10px;
+					line-height: 1.4;
+					color: $color-black-four;
+				}
+				.hr {
+					margin: 10px 0;
+				}
+			}
+		}
+
+	}
+}

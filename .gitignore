@@ -1,0 +1,12 @@
+design/.sass-cache
+design/html/
+design/css/
+!design/css/font.css
+node_modules/
+src/
+dist/
+*.iml
+npm-debug.log
+karma-[0-9]*/
+reports/
+selenium-debug.log

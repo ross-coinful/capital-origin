@@ -1,0 +1,153 @@
+.investments {
+	.jumbotron {
+		padding-top: 134px;
+		padding-bottom: 133px;
+	}
+	.quote {
+		max-width: 100%;
+		max-width: 971px;
+		width: 68%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.section {
+		padding-top: 72px;
+		padding-bottom: 80px;
+		text-align: center;
+	}
+	.section-quote {
+		padding-top: 107px;
+		padding-bottom: 122px;
+		background-color: $color-orange;
+	}
+	.section:nth-child(4) {
+		background-color: $color-white;
+		.h2.title {
+			height: 240px;
+			margin-bottom: 72px;
+		}
+	}
+}
+
+.list-feature {
+	display: flex;
+	justify-content: space-between;
+	.h3 {
+		max-width: 299px;
+		width: 100%;
+		height: 84px;
+		margin-top: 20px;
+		margin-bottom: 72px;
+	}
+}
+
+.list-board {
+	display: flex;
+	justify-content: center;
+	.board {
+		width: 420px;
+		margin-left: 10px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 125px;
+		margin-bottom: 10px;
+		background-color: $color-yellow;
+	}
+	.list {
+		max-width: 100%;
+		min-height: 490px;
+		padding: 29px 30px 0 50px;
+		margin-bottom: 20px;
+		text-align: left;
+		line-height: 21px;
+		background-color: $color-gray-four;
+		list-style-type: disc;
+	}
+	.group {
+		margin-top: 29px;
+		margin-left: -28px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	.p1 {
+		color: $color-black-one;
+	}
+}
+
+@media screen and (min-width: 701px) and (max-width: 750px) {
+	.list-board .list {
+		height: 570px;
+	}
+}
+
+@media screen and (max-width: $screen-mobile) {
+	.investments {
+		.jumbotron {
+			padding-top: 79px;
+			padding-bottom: 87px;
+		}
+		.section:nth-child(4) {
+			.h2.title {
+				height: auto;
+				margin-bottom: 40px;
+				font-size: 16px;
+				line-height: 21px;
+			}
+		}
+	}
+	.list-feature {
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.item {
+			width: 50%;
+		}
+		.icon {
+			width: 60px;
+			height: 60px;
+		}
+		.h3 {
+			width: 100%;
+			height: 50px;
+			max-width: 100%;
+			margin-top: 14px;
+			margin-bottom: 20px;
+		}
+	}
+	.list-board {
+		flex-wrap: wrap;
+		.board {
+			padding: 0 10px;
+			margin-left: 0;
+		}
+		.title {
+			height: 40px;
+			margin-bottom: 2px;
+		}
+		.list {
+			min-height: 0;
+			height: auto;
+			padding-top: 13px;
+			margin-bottom: 10px;
+			&:nth-child(1) {
+				padding-bottom: 18px;
+			}
+			&:nth-child(2) {
+				padding-bottom: 21px;
+			}
+			&:nth-child(3) {
+				padding-bottom: 36px;
+			}
+		}
+		.p1 {
+			font-size: 10px;
+			line-height: 1.4;
+		}
+	}
+}

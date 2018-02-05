@@ -1,0 +1,11 @@
+.link {
+    color: $color-white;
+    &:hover {
+        color: $color-orange;
+    }
+}
+
+.link-underline {
+    color: $color-light-gray-three;
+    border-bottom: 1px solid $color-light-gray-three;
+}

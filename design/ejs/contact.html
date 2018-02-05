@@ -1,0 +1,22 @@
+<% include partial/_head.html %>
+<div class="contact">
+	<%- include('partial/_navbar.html', {fixed: true, active: navbar.nav4}); %>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h2 class="h2 caption"><%- contact.caption %></h2>
+			<div class="contact-info">
+				<h2 class="h2 local"><%- contact.local %></h2>
+				<p class="quote address"><%- contact.address %></p>
+				<p class="quote phone"><%- contact.phone %></p>
+				<button class="btn">
+					<a class="link" href="mailto:info@noglecapital.com"><%- contact.btn %></a>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include partial/_footer.html %>
+
+<% include partial/_end.html %>

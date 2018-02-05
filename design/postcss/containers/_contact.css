@@ -1,0 +1,41 @@
+.contact {
+	.jumbotron {
+		position: static;
+		padding-top: 142px;
+		padding-bottom: 92px;
+		margin-top: $navbar-h-web;
+		text-align: center;
+		.caption {
+			margin-bottom: 157px;
+		}
+		.local {
+			margin-bottom: 26px;
+		}
+		.quote {
+			margin: 0 auto 43px;
+			font-style: italic;
+			color: $color-black-one;
+		}
+	}
+}
+
+@media screen and (max-width: $screen-mobile) {
+	.contact {
+		.jumbotron {
+			padding-top: 64px;
+			padding-bottom: 68px;
+			.caption {
+				margin-bottom: 78px;
+				font-size: 26px;
+			}
+			.local {
+				margin-bottom: 37px;
+				font-size: 18px;
+			}
+			.quote {
+				margin-bottom: 32px;
+				line-height: 1.14;
+			}
+		}
+	}
+}

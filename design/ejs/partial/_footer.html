@@ -1,0 +1,34 @@
+<div class="footer">
+	<div class="container">
+		<div class="site-map">
+			<h4 class="title"><%- footer.title1 %></h4>
+			<ul class="list left-list">
+				<% for (var i = 1; i < 5; i++) { %>
+					<li class="item">	
+						<a class="link" href="<%= navbar['href' + i] %>">
+							<%- navbar['nav' + i] %>	
+						</a>
+					</li>
+				<% } %>
+			</ul>		
+			<ul class="list right-list">
+				<li class="item">
+					<a class="link"><%- footer.link5 %></a>
+				</li>
+				<li class="item">
+					<a class="link" href="http://www.nogle.com/" target="_blank"><%- footer.link6 %></a>
+				</li>
+			</ul>		
+		</div>
+		<div class="contact-info">
+			<h4 class="title"><%- footer.title2 %></h4>
+			<ul class="list">
+				<li class="item"><%- footer.address %></li>
+				<li class="item"><%- footer.phone %></li>
+			</ul>
+		</div>
+	 	<span class="copyright">
+			<%- footer.copyright %>
+		</span>
+	</div>
+</div>
